@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Campaign from './components/Campaign';
+import Header from './components/Header';
+import logo1 from './images/logo1.png';
+import logo2 from './images/logo2.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container p-4">
+      {/* Header */}
+      <Header />
+
+      {/* Campaign iterator */}
+      <div className="w-full flex flex-col gap-3">
+        <Campaign campaignName="Yarn" campaignIcon={logo1} payPerInstall={8.2} />
+        <Campaign campaignName="Paper2" campaignIcon={logo2} payPerInstall={6.5} />
+      </div>
+      
     </div>
   );
 }

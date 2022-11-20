@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Header = props => {
   const { title } = props;
   return (
-    <div className="w-full p-4 text-lg uppercase font-bold text-center">
+    <div className="sticky w-full p-4 text-lg uppercase font-semibold text-center">
       {title}
     </div>
   )
